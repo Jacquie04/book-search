@@ -10,7 +10,7 @@
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && NODE_ENV=development npm install --no-shrinkwrap && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.0.17",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^1.1.1"
   }
